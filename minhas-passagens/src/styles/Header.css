@@ -1,0 +1,49 @@
+.header {
+  height: 120px;
+  background-color: #44749D;
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+}
+
+.header-logo {
+  width: 150px;
+  margin-left: -16px;
+}
+
+.header-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-center h1,
+.header-nav a {
+  margin: 0;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.header-user {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-button {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+.active {
+  background-color: #C6D4E1;
+  color: #44749D;
+}
