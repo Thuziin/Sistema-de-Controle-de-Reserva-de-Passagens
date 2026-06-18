@@ -1,0 +1,45 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 500px;
+  background: #EBE7E0;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
+.assentos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.seat {
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  background: #44749D;
+  color: white;
+  cursor: pointer;
+}
+
+.selected {
+  background: #C6D4E1;
+}
+
+.btn-adquirir {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  background: #44749D;
+  color: white;
+  cursor: pointer;
+}
