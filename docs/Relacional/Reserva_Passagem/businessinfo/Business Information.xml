@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="4A21A520-0105-EE2A-EBDF-9303381C77DD">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:36:45 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

@@ -1,0 +1,172 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BFDCBF1F-25C0-3407-2198-A2A11BF5D3B5" name="PASSAGEM">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:51:13 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Data" id="80043F3A-19F2-55D8-2EB3-F79A73CD1B74">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:54:56 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Hora" id="53C3A9A3-E9C8-3829-AA67-7DBF7EED3778">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:55:42 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VOO_ID" id="AF0DA622-8D6B-50D6-9C05-3E372632D503">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:11:16 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B535A494-2400-9642-18DA-B6C5BAF63D70" referredColumn="C69FCFA8-7F91-B352-DBE7-A2B42C0418D7"/>
+</associations>
+</Column>
+<Column name="PESSOA_CPF_COMPRA" id="F45E2D6B-382D-DB32-9C46-9877E03F81BC">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:15:23 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5DEF4CEE-BC98-0D32-BB8B-68DDA3E16D55" referredColumn="A4281FF2-41C3-04F4-39B5-ECC919067716"/>
+</associations>
+</Column>
+<Column name="AEROPORTO_Identificador" id="EE2E1932-CEEB-E37D-C2DB-64B687094C95">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:19:13 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2184F805-BB67-2730-8016-98799215E7ED" referredColumn="1F2D2DA4-4239-E7B2-713E-E3EB35168621"/>
+</associations>
+</Column>
+<Column name="REGISTRO_PESSOA_CPF" id="C955614E-EC5B-59B5-6586-09A133199CE4">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:31:42 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="98A4AA6B-BEEE-747E-562E-9139B023EC10" referredColumn="B021314C-E132-8B25-BAD1-BC81A9D006EE"/>
+</associations>
+</Column>
+<Column name="Valor" id="3241659B-6A16-E73F-F367-E17A5CEE4171">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:52:40 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Assento" id="B70891AF-7497-FECB-B407-D2D2309ACA35">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:53:58 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="451F62AD-CA07-C4F5-2849-EAE7484650AE" name="PASSAGEM_PK">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:22:10 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="80043F3A-19F2-55D8-2EB3-F79A73CD1B74"/>
+<colUsage columnID="53C3A9A3-E9C8-3829-AA67-7DBF7EED3778"/>
+<colUsage columnID="AF0DA622-8D6B-50D6-9C05-3E372632D503"/>
+<colUsage columnID="F45E2D6B-382D-DB32-9C46-9877E03F81BC"/>
+<colUsage columnID="EE2E1932-CEEB-E37D-C2DB-64B687094C95"/>
+<colUsage columnID="C955614E-EC5B-59B5-6586-09A133199CE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7EA2C0E5-2E6D-45C2-5D49-E646638B0D83" name="PASSAGEM_VOO_FK">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:11:16 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF0DA622-8D6B-50D6-9C05-3E372632D503"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BE3B1CD1-F13B-D649-E30A-049ACFA5F760" name="PASSAGEM_PESSOA_FK">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:15:23 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F45E2D6B-382D-DB32-9C46-9877E03F81BC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E656A0B4-6207-671E-39EB-1E44E1BAD5A5" name="PASSAGEM_AEROPORTO_FK">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:19:13 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE2E1932-CEEB-E37D-C2DB-64B687094C95"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5FF21359-072E-7F9A-6CF5-F6748FB5ACD6" name="PASSAGEM_REGISTRO_FK">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:31:42 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C955614E-EC5B-59B5-6586-09A133199CE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

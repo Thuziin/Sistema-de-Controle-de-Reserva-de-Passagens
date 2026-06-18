@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F4D9DB15-23EF-64D8-5EBD-CDF953B980A1" name="AERONAVE">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:42:14 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Inscricao" id="05A483BF-29D6-85F8-4EF5-64A23CC5C44F">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:45:32 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Modelo" id="A914F4BF-E118-1560-C487-B95D292F5E0C">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:45:32 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="N_Assentos" id="41749D5F-1411-D2D4-5118-C70E3D931C62">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:45:32 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AAE9547E-EDB1-4626-7E11-8E99AE20C964" name="AERONAVE_PK">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:45:32 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05A483BF-29D6-85F8-4EF5-64A23CC5C44F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

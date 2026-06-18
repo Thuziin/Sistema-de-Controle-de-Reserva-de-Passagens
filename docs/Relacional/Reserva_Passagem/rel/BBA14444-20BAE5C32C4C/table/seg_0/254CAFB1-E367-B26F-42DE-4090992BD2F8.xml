@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="254CAFB1-E367-B26F-42DE-4090992BD2F8" name="PESSOA">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:37:02 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CPF" id="A4281FF2-41C3-04F4-39B5-ECC919067716">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:37:41 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="P_Nome" id="F1A8F32E-AC30-FD3A-4BCC-762401F3E4B9">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:38:27 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="U_Nome" id="00B75173-45C1-AD26-1ACE-4E5D5B4BEB59">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:38:27 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Email" id="6C9F6311-92A9-1FE2-9019-1223FF9263F5">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:39:02 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Data_Nascimento" id="1E897341-74A2-5A2B-8702-ECF475177BD5">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:42:00 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Senha" id="AD6F5D90-F7D1-7CA4-1FB4-6E9B97731B26">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:42:00 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Telefone" id="74E88C48-974C-BF44-04ED-C18479A00303">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:42:00 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Endereco" id="3654A0D0-EABC-3BCE-FA75-EFF567856908">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:42:00 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FD8CC661-98FD-ED9D-1DF8-3EEDF187A282" name="PESSOA_PK">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:37:41 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A4281FF2-41C3-04F4-39B5-ECC919067716"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
