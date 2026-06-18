@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2184F805-BB67-2730-8016-98799215E7ED" containerWithKeyObject="BFDCBF1F-25C0-3407-2198-A2A11BF5D3B5" localFKIndex="E656A0B4-6207-671E-39EB-1E44E1BAD5A5" name="PASSAGEM_AEROPORTO_FK">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:19:13 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<referredTableLongName>AEROPORTO</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>8DB83185-0ADC-3236-A6DA-7A02F6264898</referredTableID>
+<keyObject>CD347DA8-B439-B6BD-02D7-319A4D42F45D</keyObject>
+<referredKeyID>CD347DA8-B439-B6BD-02D7-319A4D42F45D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Identificador</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

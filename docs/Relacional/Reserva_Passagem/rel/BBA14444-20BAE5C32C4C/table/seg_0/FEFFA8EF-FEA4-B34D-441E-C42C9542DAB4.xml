@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FEFFA8EF-FEA4-B34D-441E-C42C9542DAB4" name="VOO">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:45:52 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="C69FCFA8-7F91-B352-DBE7-A2B42C0418D7">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:48:01 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AERONAVE_Inscricao" id="B92E9FB9-66C8-AF97-010A-6A94440A8F8C">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:04:16 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3D91CA53-ECB3-8D2E-6A51-FF1640CBCFBF" referredColumn="05A483BF-29D6-85F8-4EF5-64A23CC5C44F"/>
+</associations>
+</Column>
+<Column name="AEROPORTO_ID_CHEGADA" id="ACAE5ECD-8878-B971-111B-9D98FDEB5F64">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:06:12 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8DAB9E87-469C-78E9-B2F5-0F7F759694E8" referredColumn="1F2D2DA4-4239-E7B2-713E-E3EB35168621"/>
+</associations>
+</Column>
+<Column name="AEROPORTO_ID_PARTIDA" id="6446CD56-21BC-E80E-AF08-923F15BE6B32">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:07:58 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E82BED8A-2732-39AF-653E-BC9C502BAF50" referredColumn="1F2D2DA4-4239-E7B2-713E-E3EB35168621"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A56A7F5C-6945-FD4A-72E4-C28D38674D6E" name="VOO_PK">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 17:48:01 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C69FCFA8-7F91-B352-DBE7-A2B42C0418D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2498F83D-1A43-901C-D572-415A769E5FC1" name="VOO_AERONAVE_FK">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:04:15 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B92E9FB9-66C8-AF97-010A-6A94440A8F8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="76324EF4-0117-6E73-50A2-DA336FFB249E" name="VOO_AEROPORTO_FK">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:06:12 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ACAE5ECD-8878-B971-111B-9D98FDEB5F64"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ABE8D5DA-2AA1-5C82-EFAC-695FEDBF97C6" name="VOO_AEROPORTO_FKv2">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:07:58 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6446CD56-21BC-E80E-AF08-923F15BE6B32"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

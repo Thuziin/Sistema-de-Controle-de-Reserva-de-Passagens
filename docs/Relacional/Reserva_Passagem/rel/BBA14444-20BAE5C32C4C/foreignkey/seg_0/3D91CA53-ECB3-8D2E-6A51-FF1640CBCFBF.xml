@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3D91CA53-ECB3-8D2E-6A51-FF1640CBCFBF" containerWithKeyObject="FEFFA8EF-FEA4-B34D-441E-C42C9542DAB4" localFKIndex="2498F83D-1A43-901C-D572-415A769E5FC1" name="VOO_AERONAVE_FK">
+<createdBy>dssar</createdBy>
+<createdTime>2026-06-17 18:04:15 UTC</createdTime>
+<ownerDesignName>Reserva_Passagem</ownerDesignName>
+<referredTableLongName>AERONAVE</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>F4D9DB15-23EF-64D8-5EBD-CDF953B980A1</referredTableID>
+<keyObject>AAE9547E-EDB1-4626-7E11-8E99AE20C964</keyObject>
+<referredKeyID>AAE9547E-EDB1-4626-7E11-8E99AE20C964</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Inscricao</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
