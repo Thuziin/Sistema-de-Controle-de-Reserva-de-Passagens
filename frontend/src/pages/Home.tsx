@@ -1,52 +1,32 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import CardTicket from "../components/CardTicket";
 import ModalSeat from "../components/ModalSeat";
-
 import logo from "../assets/Logo3.png";
-
 import type { Ticket } from "../types/Ticket";
 
 import "../styles/Home.css";
 
 function Home() {
   const [modalAberto, setModalAberto] = useState(false);
+  const [tickets, setTickets] = useState<Ticket[]>([]);
+  const [ticketSelecionado, setTicketSelecionado] = useState<Ticket | null>(null);
+  const [pesquisa, setPesquisa] = useState("");
 
-  const tickets: Ticket[] = [
-    {
-      id: 1,
-      origem: "Belo Horizonte",
-      destino: "SP",
-      data: "15/07/2026",
-      hora: "08:30",
-      aeroporto: "Galeão",
-    },
-    {
-      id: 2,
-      origem: "Belo Horizonte",
-      destino: "SP",
-      data: "15/07/2026",
-      hora: "08:30",
-      aeroporto: "Galeão",
-    },
-    {
-      id: 3,
-      origem: "Belo Horizonte",
-      destino: "SP",
-      data: "15/07/2026",
-      hora: "08:30",
-      aeroporto: "Galeão",
-    },
-    {
-      id: 4,
-      origem: "Belo Horizonte",
-      destino: "SP",
-      data: "15/07/2026",
-      hora: "08:30",
-      aeroporto: "Galeão",
-    },
-  ];
+  useEffect(() => {
+    fetch("http://localhost:3000/api/passagens")
+      .then((response) => response.json())
+      .then((dados) => {
+        setTickets(dados);
+      })
+      .catch(console.error);
+  }, []);
+
+  const ticketsFiltrados = tickets.filter((ticket) =>
+    ticket.destino
+      .toLowerCase()
+      .includes(pesquisa.toLowerCase())
+  );
 
   return (
     <>
@@ -63,6 +43,9 @@ function Home() {
             type="text"
             placeholder="Pesquisar"
             className="search-input"
+            value={pesquisa}
+            onChange={(e) => setPesquisa(e.target.value)}
+
           />
         </div>
 
@@ -71,12 +54,12 @@ function Home() {
         </h2>
 
         <div className="cards-grid">
-          {tickets.map((ticket) => (
+          {ticketsFiltrados.map((ticket) => (
             <CardTicket
               key={ticket.id}
               ticket={ticket}
               onClick={() => {
-                console.log("Cliquei no card");
+                setTicketSelecionado(ticket);
                 setModalAberto(true);
               }}
             />
@@ -88,6 +71,7 @@ function Home() {
       <ModalSeat
         aberto={modalAberto}
         fechar={() => setModalAberto(false)}
+        ticket={ticketSelecionado}
       />
     </>
   );
