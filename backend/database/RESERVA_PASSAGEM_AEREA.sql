@@ -1,5 +1,5 @@
 -- Gerado por Oracle SQL Developer Data Modeler 24.3.1.351.0831
---   em:        2026-06-20 12:42:07 BRT
+--   em:        2026-06-20 18:47:46 BRT
 --   site:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
 
@@ -33,25 +33,19 @@ ALTER TABLE AEROPORTO
 
 CREATE TABLE PASSAGEM 
     ( 
-     Data                       DATE  NOT NULL , 
-     Hora                       DATE  NOT NULL , 
-     VOO_ID                     INT   NOT NULL , 
-     PESSOA_CPF_COMPRA          VARCHAR (11)  NOT NULL , 
-     AEROPORTO_Identificador    VARCHAR (3)  NOT NULL , 
-     REGISTRO_PESSOA_CPF        VARCHAR (11)  NOT NULL , 
-     Valor                      INT  NOT NULL , 
-     Assento                    VARCHAR (4)  NOT NULL , 
-     PASSAGEM_Data              DATE , 
-     PASSAGEM_Hora              DATE , 
-     PASSAGEM_VOO_ID            INT , 
-     PASSAGEM_PESSOA_CPF_COMPRA VARCHAR (11) , 
-     PASSAGEM_AEROPORTO_Id      VARCHAR (3) , 
-     PASSAGEIRO_CPF             VARCHAR (11)  NOT NULL 
+     Data                    DATE  NOT NULL , 
+     Hora                    DATE  NOT NULL , 
+     VOO_ID                  INT   NOT NULL , 
+     PESSOA_CPF_COMPRA       VARCHAR (11)  NOT NULL , 
+     AEROPORTO_Identificador VARCHAR (3)  NOT NULL , 
+     PASSAGEIRO_CPF          VARCHAR (11) , 
+     Valor                   INT  NOT NULL , 
+     Assento                 VARCHAR (4)  NOT NULL 
     ) 
 ;
 
 ALTER TABLE PASSAGEM 
-    ADD CONSTRAINT PASSAGEM_PK PRIMARY KEY ( Data, Hora, VOO_ID, PESSOA_CPF_COMPRA, AEROPORTO_Identificador, REGISTRO_PESSOA_CPF ) ;
+    ADD CONSTRAINT PASSAGEM_PK PRIMARY KEY ( Data, Hora, VOO_ID, PESSOA_CPF_COMPRA, AEROPORTO_Identificador ) ;
 
 CREATE TABLE PESSOA 
     ( 
@@ -71,7 +65,7 @@ ALTER TABLE PESSOA
 
 CREATE TABLE VOO 
     ( 
-     ID                   INT  NOT NULL , 
+     ID                   INT NOT NULL , 
      AERONAVE_Inscricao   VARCHAR (6)  NOT NULL , 
      AEROPORTO_ID_CHEGADA VARCHAR (3)  NOT NULL , 
      AEROPORTO_ID_PARTIDA VARCHAR (3)  NOT NULL 
