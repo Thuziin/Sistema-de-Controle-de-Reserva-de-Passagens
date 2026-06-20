@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="ABE5F43D-486C-BBBB-EF7F-86B82526FF25" containerWithKeyObject="4E0F819A-E9ED-F0D0-5FF7-07AA10E19B8E" localFKIndex="10D94B79-DD57-7458-0F10-229447CE14F7" name="REGISTRO_PESSOA_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D9B61054-AED3-1A07-B4F7-9C0DED39F6D4" containerWithKeyObject="BFDCBF1F-25C0-3407-2198-A2A11BF5D3B5" localFKIndex="B7C7F54D-5C41-915D-0FA0-60F5478EDABA" name="PASSAGEM_PESSOA_FKv2">
 <createdBy>dssar</createdBy>
-<createdTime>2026-06-17 18:30:19 UTC</createdTime>
+<createdTime>2026-06-19 18:31:53 UTC</createdTime>
 <ownerDesignName>Reserva_Passagem</ownerDesignName>
 <referredTableLongName>PESSOA</referredTableLongName>
 <deleteRule>CASCADE</deleteRule>
