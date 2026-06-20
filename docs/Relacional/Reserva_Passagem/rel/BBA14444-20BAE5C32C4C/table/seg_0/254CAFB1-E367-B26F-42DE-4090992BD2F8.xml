@@ -45,6 +45,7 @@
 <createdBy>dssar</createdBy>
 <createdTime>2026-06-17 17:39:02 UTC</createdTime>
 <ownerDesignName>Reserva_Passagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -56,6 +57,7 @@
 <createdBy>dssar</createdBy>
 <createdTime>2026-06-17 17:42:00 UTC</createdTime>
 <ownerDesignName>Reserva_Passagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -66,6 +68,7 @@
 <createdBy>dssar</createdBy>
 <createdTime>2026-06-17 17:42:00 UTC</createdTime>
 <ownerDesignName>Reserva_Passagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -77,6 +80,7 @@
 <createdBy>dssar</createdBy>
 <createdTime>2026-06-17 17:42:00 UTC</createdTime>
 <ownerDesignName>Reserva_Passagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -88,6 +92,7 @@
 <createdBy>dssar</createdBy>
 <createdTime>2026-06-17 17:42:00 UTC</createdTime>
 <ownerDesignName>Reserva_Passagem</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
