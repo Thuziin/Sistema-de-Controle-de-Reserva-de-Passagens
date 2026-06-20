@@ -1,5 +1,5 @@
 -- Gerado por Oracle SQL Developer Data Modeler 24.3.1.351.0831
---   em:        2026-06-17 15:33:32 BRT
+--   em:        2026-06-20 12:42:07 BRT
 --   site:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
 
@@ -33,14 +33,20 @@ ALTER TABLE AEROPORTO
 
 CREATE TABLE PASSAGEM 
     ( 
-     Data                    DATE  NOT NULL , 
-     Hora                    DATE  NOT NULL , 
-     VOO_ID                  INT  NOT NULL , 
-     PESSOA_CPF_COMPRA       VARCHAR (11)  NOT NULL , 
-     AEROPORTO_Identificador VARCHAR (3)  NOT NULL , 
-     REGISTRO_PESSOA_CPF     VARCHAR (11)  NOT NULL , 
-     Valor                   INT  NOT NULL , 
-     Assento                 VARCHAR (4)  NOT NULL 
+     Data                       DATE  NOT NULL , 
+     Hora                       DATE  NOT NULL , 
+     VOO_ID                     INT   NOT NULL , 
+     PESSOA_CPF_COMPRA          VARCHAR (11)  NOT NULL , 
+     AEROPORTO_Identificador    VARCHAR (3)  NOT NULL , 
+     REGISTRO_PESSOA_CPF        VARCHAR (11)  NOT NULL , 
+     Valor                      INT  NOT NULL , 
+     Assento                    VARCHAR (4)  NOT NULL , 
+     PASSAGEM_Data              DATE , 
+     PASSAGEM_Hora              DATE , 
+     PASSAGEM_VOO_ID            INT , 
+     PASSAGEM_PESSOA_CPF_COMPRA VARCHAR (11) , 
+     PASSAGEM_AEROPORTO_Id      VARCHAR (3) , 
+     PASSAGEIRO_CPF             VARCHAR (11)  NOT NULL 
     ) 
 ;
 
@@ -52,28 +58,17 @@ CREATE TABLE PESSOA
      CPF             VARCHAR (11)  NOT NULL , 
      P_Nome          VARCHAR (15)  NOT NULL , 
      U_Nome          VARCHAR (15)  NOT NULL , 
-     Email           VARCHAR (30)  NOT NULL , 
-     Data_Nascimento DATE  NOT NULL , 
-     Senha           VARCHAR (15)  NOT NULL , 
-     Telefone        VARCHAR (14)  NOT NULL , 
-     Endereco        VARCHAR (50)  NOT NULL 
+     Email           VARCHAR (30) , 
+     Data_Nascimento DATE , 
+     Senha           VARCHAR (15) , 
+     Telefone        VARCHAR (14) , 
+     Endereco        VARCHAR (50) 
     ) 
 ;
 
 ALTER TABLE PESSOA 
     ADD CONSTRAINT PESSOA_PK PRIMARY KEY ( CPF ) ;
 
-CREATE TABLE REGISTRO 
-    ( 
-     P_Nome     VARCHAR (15)  NOT NULL , 
-     U_Nome     VARCHAR (15)  NOT NULL , 
-     PESSOA_CPF VARCHAR (11)  NOT NULL 
-    ) 
-;
-
-ALTER TABLE REGISTRO 
-    ADD CONSTRAINT REGISTRO_PK PRIMARY KEY ( PESSOA_CPF ) ;
-	
 CREATE TABLE VOO 
     ( 
      ID                   INT  NOT NULL , 
@@ -111,13 +106,13 @@ ALTER TABLE PASSAGEM
 ;
 
 ALTER TABLE PASSAGEM 
-    ADD CONSTRAINT PASSAGEM_REGISTRO_FK FOREIGN KEY 
+    ADD CONSTRAINT PASSAGEM_PESSOA_FKv2 FOREIGN KEY 
     ( 
-     REGISTRO_PESSOA_CPF
+     PASSAGEIRO_CPF
     ) 
-    REFERENCES REGISTRO 
+    REFERENCES PESSOA 
     ( 
-     PESSOA_CPF
+     CPF
     ) 
     ON DELETE CASCADE 
 ;
@@ -130,18 +125,6 @@ ALTER TABLE PASSAGEM
     REFERENCES VOO 
     ( 
      ID
-    ) 
-    ON DELETE CASCADE 
-;
-
-ALTER TABLE REGISTRO 
-    ADD CONSTRAINT REGISTRO_PESSOA_FK FOREIGN KEY 
-    ( 
-     PESSOA_CPF
-    ) 
-    REFERENCES PESSOA 
-    ( 
-     CPF
     ) 
     ON DELETE CASCADE 
 ;
@@ -182,13 +165,14 @@ ALTER TABLE VOO
     ON DELETE CASCADE 
 ;
 
-
+ALTER TABLE PASSAGEM
+    ADD COLUMN id SERIAL;
 
 -- Relatório do Resumo do Oracle SQL Developer Data Modeler: 
 -- 
--- CREATE TABLE                             6
+-- CREATE TABLE                             5
 -- CREATE INDEX                             0
--- ALTER TABLE                             14
+-- ALTER TABLE                             12
 -- CREATE VIEW                              0
 -- ALTER VIEW                               0
 -- CREATE PACKAGE                           0
