@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import login from "../assets/Login.png";
 import pessoa from "../assets/PessoaLogin.png";
 import cadiado from "../assets/CadiadoLogin.png";
@@ -5,8 +7,43 @@ import cadiado from "../assets/CadiadoLogin.png";
 import "../styles/Login.css";
 
 function Login() {
-  const handleLogin = () => {
-    console.log("Login");
+  const navigate = useNavigate();
+
+  const [cpf, setCpf] = useState("");
+  const [senha, setSenha] = useState("");
+
+  const handleLogin = async () => {
+    try {
+
+      const response = await fetch(
+        "http://localhost:3000/api/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            cpf,
+            senha,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        alert("CPF ou senha inválidos");
+        return;
+      }
+
+      const usuario = await response.json();
+
+      localStorage.setItem("cpf", usuario.cpf);
+
+      navigate("/home");
+
+    } catch (error) {
+      console.error(error);
+      alert("Erro ao conectar com servidor");
+    }
   };
 
   return (
@@ -18,7 +55,9 @@ function Login() {
             <span aria-hidden="true"><img className="pessoa" src={pessoa} alt="pessoa" /></span>
             <input
               type="text"
-              placeholder="Usuário"
+              placeholder="CPF"
+              value={cpf}
+              onChange={(e) => setCpf(e.target.value)}
             />
           </div>
 
@@ -27,6 +66,8 @@ function Login() {
             <input
               type="password"
               placeholder="Senha"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
             />
           </div>
 

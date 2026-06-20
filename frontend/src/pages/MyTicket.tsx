@@ -1,48 +1,26 @@
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import CardTicket from "../components/CardTicket";
-
 import logo from "../assets/Logo3.png";
-
 import type { Ticket } from "../types/Ticket";
+
 import "../styles/MyTicket.css";
 
 function MyTicket() {
+  const [tickets, setTickets] = useState<Ticket[]>([]);
 
-  const tickets: Ticket[] = [
-    {
-      id: 1,
-      origem: "Belo Horizonte",
-      destino: "SP",
-      data: "15/07/2026",
-      hora: "08:30",
-      aeroporto: "Galeão",
-    },
-    {
-      id: 2,
-      origem: "Belo Horizonte",
-      destino: "SP",
-      data: "15/07/2026",
-      hora: "08:30",
-      aeroporto: "Galeão",
-    },
-    {
-      id: 3,
-      origem: "Belo Horizonte",
-      destino: "SP",
-      data: "15/07/2026",
-      hora: "08:30",
-      aeroporto: "Galeão",
-    },
-    {
-      id: 4,
-      origem: "Belo Horizonte",
-      destino: "SP",
-      data: "15/07/2026",
-      hora: "08:30",
-      aeroporto: "Galeão",
-    },
-  ];
+  useEffect(() => {
+    const cpf = localStorage.getItem("cpf");
 
+    fetch(
+      `http://localhost:3000/api/historico/${cpf}`
+    )
+      .then((response) => response.json())
+      .then((dados) => {
+        setTickets(dados);
+      })
+      .catch(console.error);
+  }, []);
 
   return (
     <>

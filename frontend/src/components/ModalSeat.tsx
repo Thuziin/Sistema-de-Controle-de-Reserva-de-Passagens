@@ -1,34 +1,66 @@
 import { useState } from "react";
+import type { Ticket } from "../types/Ticket";
 import "../styles/ModalSeat.css";
 
 interface ModalSeatProps {
   aberto: boolean;
   fechar: () => void;
+  ticket: Ticket | null;
 }
 
 function ModalSeat({
   aberto,
-  fechar
+  fechar,
+  ticket
 }: ModalSeatProps) {
 
   const [assentoSelecionado, setAssentoSelecionado] =
     useState<string | null>(null);
+  const seats: string[] = ["1A", "1B", "1C", "2A", "2B", "2C"];
 
   if (!aberto) return null;
 
-  const seats = [
-    "C3", "C4", "C5", "C6", "C7",
-    "D3", "D4", "D5", "D6", "D7"
-  ];
+  async function adquirirPassagem() {
 
-  function adquirirPassagem() {
-    if (!assentoSelecionado) {
-      alert("Selecione um assento!");
+    if (!assentoSelecionado || !ticket) {
+      alert("Selecione um assento");
       return;
     }
 
-    alert(`Assento ${assentoSelecionado} adquirido!`);
-    fechar();
+    const cpf = localStorage.getItem("cpf");
+
+    try {
+
+      const response = await fetch(
+        "http://localhost:3000/api/comprar",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            cpf,
+            passagemId: ticket.id,
+            assento: assentoSelecionado
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error();
+      }
+
+      alert("Passagem adquirida!");
+
+      fechar();
+
+      window.location.reload();
+
+      fechar();
+
+    } catch {
+      alert("Erro ao adquirir passagem");
+    }
   }
 
   return (
@@ -40,7 +72,7 @@ function ModalSeat({
 
         <div className="assentos">
 
-          {seats.map((seat) => (
+          {seats.map((seat: string) => (
             <button
               key={seat}
               className={
