@@ -8,7 +8,7 @@
 <referredTableID>254CAFB1-E367-B26F-42DE-4090992BD2F8</referredTableID>
 <keyObject>FD8CC661-98FD-ED9D-1DF8-3EEDF187A282</keyObject>
 <referredKeyID>FD8CC661-98FD-ED9D-1DF8-3EEDF187A282</referredKeyID>
-<mandatory>true</mandatory>
+<mandatory>false</mandatory>
 <refColNames>CPF</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>
