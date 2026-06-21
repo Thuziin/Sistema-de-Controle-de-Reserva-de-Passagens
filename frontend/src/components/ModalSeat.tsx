@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Ticket } from "../types/Ticket";
 import "../styles/ModalSeat.css";
 
@@ -6,99 +6,76 @@ interface ModalSeatProps {
   aberto: boolean;
   fechar: () => void;
   ticket: Ticket | null;
+  avancarModalPassenger: (assento: string) => void;
 }
 
-function ModalSeat({
-  aberto,
-  fechar,
-  ticket
-}: ModalSeatProps) {
+function ModalSeat({ aberto, fechar, ticket, avancarModalPassenger }: ModalSeatProps) {
+  const [assentoSelecionado, setAssentoSelecionado] = useState<string | null>(
+    null,
+  );
 
-  const [assentoSelecionado, setAssentoSelecionado] =
-    useState<string | null>(null);
-  const seats: string[] = ["1A", "1B", "1C", "2A", "2B", "2C"];
+  const [seats, setSeats] = useState<string[]>([]);
+
+
+  useEffect(() => {
+    if (aberto && ticket?.id) {
+      fetch(
+        `http://localhost:3000/api/assentos/${ticket?.id}`
+      ).then((response) => response.text())
+       .then((dados) => {
+          const totalAssentos = Number(dados);
+          const letrasColunas = ["A", "B", "C", "D", "E", "F"];
+          
+          const totalFileiras = Math.ceil(totalAssentos / letrasColunas.length);
+          const listaGerada: string[] = [];
+
+          for (const letra of letrasColunas) {
+            for (let fileira = 1; fileira <= totalFileiras; fileira++) {
+              
+              if (listaGerada.length >= totalAssentos) break;
+              
+              listaGerada.push(`${fileira}${letra}`);
+            }
+          }
+
+          setSeats(listaGerada);
+       })
+       .catch((error) => console.error("Erro no fetch:", error));
+    }
+  }, [aberto, ticket]);
 
   if (!aberto) return null;
 
-  async function adquirirPassagem() {
-
+  function registrarPassageiro() {
     if (!assentoSelecionado || !ticket) {
-      alert("Selecione um assento");
-      return;
+      alert("Selecione um assento primeiro!");
+      return ;
     }
 
-    const cpf = localStorage.getItem("cpf");
-
-    try {
-
-      const response = await fetch(
-        "http://localhost:3000/api/comprar",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            cpf,
-            passagemId: ticket.id,
-            assento: assentoSelecionado
-          }),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error();
-      }
-
-      alert("Passagem adquirida!");
-
-      fechar();
-
-      window.location.reload();
-
-      fechar();
-
-    } catch {
-      alert("Erro ao adquirir passagem");
-    }
+    avancarModalPassenger(assentoSelecionado);
   }
 
   return (
     <div className="overlay">
-
       <div className="modal">
-
         <h2>Lugares Disponíveis</h2>
 
         <div className="assentos">
-
           {seats.map((seat: string) => (
             <button
               key={seat}
-              className={
-                assentoSelecionado === seat
-                  ? "seat selected"
-                  : "seat"
-              }
-              onClick={() =>
-                setAssentoSelecionado(seat)
-              }
+              className={assentoSelecionado === seat ? "seat selected" : "seat"}
+              onClick={() => setAssentoSelecionado(seat)}
             >
               {seat}
             </button>
           ))}
-
         </div>
 
-        <button
-          className="btn-adquirir"
-          onClick={adquirirPassagem}
-        >
+        <button className="btn-adquirir" onClick={registrarPassageiro}>
           Adquirir
         </button>
-
       </div>
-
     </div>
   );
 }
