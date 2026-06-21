@@ -5,6 +5,7 @@ import authRoutes from "./routes/authRoutes";
 import passagemRoutes from "./routes/passagemRoutes";
 import historicoRoutes from "./routes/historicoRoutes";
 import compraRoutes from "./routes/compraRoutes";
+import assentoAeronaveRoute from "./routes/assentoAeronaveRoute";
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use("/api", authRoutes);
 app.use("/api", passagemRoutes);
 app.use("/api", historicoRoutes);
 app.use("/api", compraRoutes);
+app.use("/api", assentoAeronaveRoute)
 
 pool.query("SELECT NOW()")
     .then(() => console.log("Banco conectado!"))
