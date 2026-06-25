@@ -10,7 +10,7 @@ router.post("/comprar", async (req, res) => {
             UPDATE passagem
             SET
               pessoa_cpf_compra = $1,
-              registro_pessoa_cpf = $1,
+              passageiro_cpf = $1,
               assento = $2
             WHERE id = $3
             `,
