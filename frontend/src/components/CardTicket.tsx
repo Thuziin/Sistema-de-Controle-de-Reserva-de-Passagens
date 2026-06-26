@@ -37,6 +37,19 @@ function CardTicket({
         <p className="label">Aeroporto</p>
         <p>{ticket.aeroporto}</p>
       </div>
+      {ticket.assento && (
+          <div className="ticket-airport">
+            <p className="label">Assento</p>
+            <p><strong>{ticket.assento}</strong></p>
+          </div>
+        )}
+
+      {ticket.passageiro && (
+        <div className="ticket-passenger-footer">
+          <p className="label">Passageira(o)</p>
+          <p className="passenger-name">{ticket.passageiro}</p>
+        </div>
+      )}
     </div>
   );
 }
