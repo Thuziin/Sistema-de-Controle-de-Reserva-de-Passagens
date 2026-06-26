@@ -35,7 +35,9 @@ function ModalPassenger({ aberto, fechar, ticket, assentoSelecionado, retonarMod
                 body: JSON.stringify({
                     cpf,
                     passagemId: ticket.id,
-                    assento: assentoSelecionado
+                    assento: assentoSelecionado,
+                    pnome_passageiro: p_nome,
+                    unome_passageiro: u_nome
                 }),
             });
 
