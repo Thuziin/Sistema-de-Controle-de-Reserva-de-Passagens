@@ -5,4 +5,6 @@ export interface Ticket {
   data: string;
   hora: string;
   aeroporto: string;
+  assento: string | null;
+  passageiro: string | null;
 }

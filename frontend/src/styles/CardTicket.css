@@ -1,6 +1,7 @@
 .card-ticket {
   width: 320px;
-  height: 180px;
+  height: auto;
+  min-height: 180px;
   background-color: #44749D;
   border-radius: 16px;
   padding: 20px;
@@ -43,4 +44,22 @@
 .ticket-airport {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.ticket-seat-badge {
+  text-align: right;
+}
+
+.ticket-passenger-footer {
+  border-top: 1px dashed rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.passenger-name {
+  font-weight: 500;
 }

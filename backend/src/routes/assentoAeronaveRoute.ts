@@ -12,9 +12,11 @@ router.get("/assentos/:id", async (req, res) => {
             FROM AERONAVE A
             JOIN VOO V
             ON A.INSCRICAO = V.AERONAVE_Inscricao
-            JOIN PASSAGEM P
-            ON P.VOO_ID = V.ID
-            WHERE P.ID = $1;
+            WHERE V.ID = (
+                SELECT P.VOO_ID
+                FROM PASSAGEM P
+                WHERE P.ID = $1
+);
             `,
             [id]
         );
