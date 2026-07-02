@@ -72,8 +72,11 @@ function ModalSeat({ aberto, fechar, ticket, avancarModalPassenger }: ModalSeatP
           ))}
         </div>
 
-        <button className="btn-adquirir" onClick={registrarPassageiro}>
+        <button className="btn" onClick={registrarPassageiro}>
           Adquirir
+        </button>
+        <button className="btn" onClick={fechar}>
+          Voltar
         </button>
       </div>
     </div>
