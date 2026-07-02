@@ -71,3 +71,21 @@
   width: 60px;
   height: 60px;
 }
+button.cadastro-link-btn {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  height: auto !important;
+  width: auto !important;
+  font-family: inherit;
+  font-size: 14px;
+  color: white !important;
+  text-decoration: underline !important;
+  cursor: pointer;
+  display: inline-block;
+}
+
+button.cadastro-link-btn:hover {
+  color: #f89880 !important;
+}

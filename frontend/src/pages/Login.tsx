@@ -4,6 +4,8 @@ import login from "../assets/Login.png";
 import pessoa from "../assets/PessoaLogin.png";
 import cadiado from "../assets/CadiadoLogin.png";
 
+import ModalRegister from "../components/ModalRegister";
+
 import "../styles/Login.css";
 
 function Login() {
@@ -11,6 +13,8 @@ function Login() {
 
   const [cpf, setCpf] = useState("");
   const [senha, setSenha] = useState("");
+
+  const [modalAberto, setModalAberto] = useState(false);
 
   const handleLogin = async () => {
     try {
@@ -58,6 +62,7 @@ function Login() {
               placeholder="CPF"
               value={cpf}
               onChange={(e) => setCpf(e.target.value)}
+              maxLength={11}
             />
           </div>
 
@@ -75,12 +80,23 @@ function Login() {
             Login
           </button>
 
+          <button className="cadastro-link-btn"
+            type="button"
+            onClick={() => setModalAberto(true)}>
+            Cadastre-se
+          </button>
+
         </div>
       </div>
 
       <div className="login-right">
         <img src={login} alt="Login" />
       </div>
+
+      <ModalRegister
+        aberto={modalAberto}
+        onClose={() => setModalAberto(false)}
+      />
     </div>
   );
 }
