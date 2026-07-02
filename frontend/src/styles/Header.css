@@ -47,3 +47,21 @@
   background-color: #C6D4E1;
   color: #44749D;
 }
+
+button.btn-logout {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  height: auto !important;
+  width: auto !important;
+  font-family: inherit;
+  font-size: 20px;
+  color: white !important;
+  cursor: pointer;
+  display: inline-block;
+}
+
+button.btn-logout:hover {
+  color: #f89880 !important;
+}

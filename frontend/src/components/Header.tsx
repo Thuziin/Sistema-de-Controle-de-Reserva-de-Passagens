@@ -1,5 +1,5 @@
 import "../styles/Header.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 interface HeaderProps {
   titulo: string;
@@ -9,6 +9,15 @@ interface HeaderProps {
 }
 
 function Header({ logo }: HeaderProps) {
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("cpf");
+    localStorage.clear();
+    navigate("/")
+  }
+
   return (
     <header className="header">
       <img
@@ -35,6 +44,10 @@ function Header({ logo }: HeaderProps) {
         >
           Minhas Passagens
         </NavLink>
+
+        <nav className="header-nav">
+          <button type="button" className="btn-logout" onClick={handleLogout}>Sair</button>
+        </nav>
       </div>
     </header>
   );
