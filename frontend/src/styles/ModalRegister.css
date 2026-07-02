@@ -1,0 +1,55 @@
+.overlayR {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalR {
+    width: 500px;
+    background: #44749D;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+.btnR {
+    width: 110px;
+    height: 40px; 
+    border-radius: 10px;
+    color: black;
+    background: #C6D4E1;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px; 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.tituloR {
+    margin-bottom: 15px;
+    color: #FFFFFF;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-groupR {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background: #C6D4E1;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.input-groupR input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
